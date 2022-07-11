@@ -1,0 +1,574 @@
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Smooch&family=Varela+Round&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Varela Round", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+  padding: 3em;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-top: 4em;
+}
+
+.col {
+  flex-basis: 30%;
+}
+
+.btn {
+  text-decoration: none;
+  color: #fff;
+  padding: 1em;
+  background: transparent;
+  border: 2px solid #c7a17a;
+  position: relative;
+  z-index: 0;
+  transition: 0.5s;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #c7a17a;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.btn:hover {
+  border: 2px solid #fff;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+
+/* ----- Nav ----- */
+
+nav {
+  padding: 1em 4em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #151412;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.logo {
+  width: 133px;
+  color: #fff;
+  border: 5px solid #c7a17a;
+  padding: 0.2em 0.5em;
+  display: flex;
+  align-items: center;
+}
+
+.logo .fa-solid {
+  font-size: 1rem;
+  color: #804b1f;
+  position: relative;
+  margin: 0 0.25em;
+}
+
+.nav_items {
+  display: flex;
+  gap: 2em;
+}
+
+.nav_items li {
+  list-style: none;
+  padding: 0.5em;
+}
+
+.nav_items li a {
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.nav_items li a .fa-solid {
+  font-size: 1rem;
+  position: relative;
+  bottom: 1px;
+  right: 2px;
+}
+
+.nav_items li a:hover {
+  color: #c7a17a;
+}
+.nav_items li:nth-child(3) {
+  position: relative;
+}
+
+.menu_list::before {
+  content: "";
+  height: 100%;
+  width: 5px;
+  background-color: #c7a17a;
+  display: inline-block;
+  position: absolute;
+  bottom: -8px;
+}
+
+.menu_list {
+  width: 120%;
+  height: 0%;
+  position: absolute;
+  background-color: #151412;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.menu_list li {
+  padding: 0.5em 1em;
+}
+
+.menu_list li a {
+  font-size: 0.75rem;
+}
+
+.nav_items li:nth-child(3):hover .menu_list {
+  height: 300%;
+}
+
+/* ----- Main ----- */
+
+.sub_heading {
+  text-align: center;
+  color: #c7a17a;
+}
+
+.sub_heading div {
+  display: inline-block;
+  width: 15%;
+  height: 2px;
+  background-color: #c7a17a;
+  position: relative;
+  bottom: 8px;
+}
+
+/* --- Hero --- */
+
+.hero {
+  width: 100%;
+  margin: 0 auto;
+  height: 90vh;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url(images/background.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.hero div {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero div h2 {
+  font-size: 4rem;
+  position: relative;
+  color: #fff;
+}
+
+.hero div h2::before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 10px;
+  background-color: #c7a17a;
+  position: absolute;
+  left: -20px;
+}
+
+.hero div h2 .fa-solid {
+  font-size: 2rem;
+  color: #c7a17a;
+  position: relative;
+  bottom: 4px;
+  left: 8px;
+}
+
+.hero div h2 .fa-solid:first-child {
+  left: -4px;
+}
+
+.hero div p {
+  margin: 1em 0;
+  font-size: 2rem;
+  font-family: "Smooch", cursive;
+  color: #fff;
+}
+
+/* --- Services --- */
+
+.services {
+  background-color: #151412;
+}
+
+.card img:first-child {
+  width: 100%;
+  border: 4px solid #c7a17a;
+  border-radius: 16px 16px 0 0;
+}
+
+.card h3 {
+  color: #fff;
+  margin: 0.5em 0;
+}
+
+.card p {
+  color: #9f9f9f;
+  margin: 1em 0;
+  line-height: 1.5em;
+}
+
+.card a {
+  text-decoration: none;
+  color: #c7a17a;
+}
+
+.card a .fa-solid {
+  margin-left: 4px;
+  transition: 0.2s;
+}
+
+.card a:hover {
+  color: #804b1f;
+  transition: 0.2s;
+}
+
+.card a:hover .fa-solid {
+  transform: translateX(8px);
+}
+
+.op_hours {
+  color: #fff;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("images/opening_hours.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 2em;
+  border: 4px solid #c7a17a;
+  border-radius: 16px;
+}
+
+.op_hours h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+}
+
+.op_hours_time {
+  list-style-type: none;
+}
+
+.op_hours_time li {
+  padding: 0.75em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.op_hours_time li span {
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+.op_hours_time li span:first-child {
+  color: #c7a17a;
+}
+
+.phone_no {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.phone_no span {
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-size: 1.25rem;
+}
+
+/* --- Menu ---*/
+
+.menu {
+  background-color: #f2f0ea;
+}
+
+.menu h4 {
+  text-align: center;
+  color: #804b1f;
+}
+
+.menu .col h3 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.menu .col img {
+  width: 100%;
+  border: 4px solid #804b1f;
+  border-radius: 16px 16px 0 0;
+}
+
+.menu_items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1em 0;
+}
+
+.menu_items li div {
+  flex-basis: 40%;
+}
+
+.menu_items li div:first-child p {
+  font-size: 0.75rem;
+  line-height: 1.5em;
+  color: #804b1f;
+}
+
+.menu_items li div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: #804b1f;
+}
+
+.menu_items li div:last-child span {
+  font-size: 0.75rem;
+  padding: 2px 1.5em;
+  background-color: #804b1f;
+  color: #c7a17a;
+  margin-top: 0.25em;
+}
+
+.menu_btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu_btn {
+  margin-top: 1em;
+}
+
+.menu_btn .btn {
+  color: #804b1f;
+  font-size: 0.75rem;
+}
+
+.menu_btn .btn:hover {
+  color: #fff;
+}
+
+/* --- Review --- */
+
+.review h4 {
+  text-align: center;
+  color: #804b1f;
+}
+
+.review .col {
+  flex-basis: 45%;
+  display: flex;
+  gap: 1em;
+  background-color: #151412;
+  border: 4px solid #c7a17a;
+  border-radius: 8px 16px 8px 16px;
+  padding: 1.5em;
+  color: #fff;
+}
+
+.review .col img {
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  border: 3px solid #c7a17a;
+}
+
+.review_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.review_text p {
+  color: #9f9f9f;
+  line-height: 1.5em;
+}
+
+.review_text span {
+  font-family: "Kdam Thmor Pro", sans-serif;
+  color: #804b1f;
+}
+
+/* --- About ---*/
+
+.about {
+  background-color: #151412;
+}
+.about .sub_heading {
+  margin-bottom: 2em;
+}
+
+.about p {
+  width: 80%;
+  margin: 1em auto;
+  line-height: 1.5em;
+  color: #9f9f9f;
+}
+
+.about span {
+  font-size: 1.25rem;
+  color: #c7a17a;
+}
+
+.about p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* --- Contact --- */
+
+.contact {
+  background-color: #f2f0ea;
+}
+
+.contact .col {
+  flex-basis: 40%;
+}
+
+.contact_items {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact_items li {
+  list-style: none;
+  margin: 1em;
+}
+
+.contact_items li .fa-solid {
+  color: #804b1f;
+  margin-right: 0.5em;
+}
+
+.contact_items li span {
+  color: #9f9f9f;
+  margin-left: 1.5em;
+}
+.contact .col img {
+  width: 100%;
+  box-shadow: 0 0 4px #c7a17a;
+}
+
+/* ----- Footer ----- */
+
+footer {
+  background-color: #151412;
+  color: #fff;
+}
+
+footer .row {
+  margin-top: 1.75em;
+}
+
+.site_links .col h3 {
+  margin-bottom: 2em;
+}
+
+.site_links .col h4 {
+  margin-bottom: 0.75em;
+}
+
+.site_links .col ul li {
+  font-size: 0.75rem;
+  list-style: none;
+  line-height: 2em;
+}
+
+.site_links .col ul li a {
+  text-decoration: none;
+  color: #c7a17a;
+}
+.site_links .col:first-child ul li {
+  color: #9f9f9f;
+}
+
+.site_links .col:first-child ul li a:hover {
+  color: #804b1f;
+}
+
+.site_links .logo {
+  margin-top: 1em;
+}
+
+.site_links .col:nth-child(2) .op_hours_time {
+  width: 60%;
+}
+
+.site_links .col:nth-child(2) .op_hours_time span:last-child {
+  color: #9f9f9f;
+}
+
+.site_links .col:last-child ul li {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.site_links .col:last-child ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.site_links .col:last-child ul li a:hover {
+  color: #804b1f;
+}
+
+.copy_rights .col:last-child {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1em;
+}
+
+.copy_rights .fa-brands {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.copy_rights .fa-brands:hover {
+  color: #804b1f;
+}
